@@ -2,10 +2,10 @@
 // Update the createAdder function below so that
 // the below code works as intended
 
-function createAdder(number1){
+function createAdder(x){
 
-    return function (number2) {
-      return number1 + number2;
+    return function (y) {
+      return x + y;
     };
 
 }
