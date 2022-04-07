@@ -22,3 +22,26 @@ console.log(addThree(17));
 console.log(addThree(50));
 console.log(addThree(100)); 
 console.log(addThree(92)); 
+
+
+
+// Exercise 2 - Promises 
+// Using either .then().catch() or Async/Await, create an asynchronous function that accepts 
+// a movie title and then either displays the movie information or logs an error.
+
+function getMovieInfo(movieName){
+  return new Promise((resolve, reject) => {
+      if (movieName.length > 5){
+          let movie = {
+              id: 123,
+              title: movieName,
+              director: 'Christopher Spielberg',
+              runtime: 157,
+              description: 'Good vs Evil'
+          }
+          resolve(movie)
+      } else {
+          reject(`${movieName} cannot be accessed because it is too short.`)
+      }
+  })
+}
